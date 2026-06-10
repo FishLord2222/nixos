@@ -7,6 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
   ];
 
   ##############
@@ -140,7 +141,14 @@
     user.email = "monteleoneenzo936@gmail.com";
   };
 };
-
+# home-manager
+   home-manager = {
+  # also pass inputs to home-manager modules
+  extraSpecialArgs = {inherit inputs;};
+  users = {
+    "enzo" = import ./home.nix;
+  };
+};
   ###########
   # Gaming  #
   ###########
