@@ -34,10 +34,11 @@
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
+    presets = [ "gruvbox-rainbow" ];
   };
 
   ##############
-  ### KITTY ###
+  ### KITTY  ###
   ##############
 
   programs.kitty = {
