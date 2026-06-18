@@ -171,8 +171,10 @@
   services.flatpak.enable                = true;
   services.udisks2.enable                = true;
   services.power-profiles-daemon.enable  = true;
+  services.lact.enable                   = true;
   services.printing.enable = true;
   programs.kdeconnect.enable = true;
+  services.gvfs.enable = true;
 
   # nix-ld: run unpatched binaries (Steam controller, etc.)
   programs.nix-ld.enable = true;
@@ -226,6 +228,11 @@
     filezilla
     kdePackages.dolphin
     kdePackages.ark
+    qdiskinfo
+    bottles
+    thunar-volman
+    thunar-archive-plugin
+    sqlite
 
     # ── Media ─────────────────────────────────────────────────────────
     vlc
@@ -247,11 +254,12 @@
     mangohud
     prismlauncher
     unigine-superposition
+    lact
 
     # ── Productivity ──────────────────────────────────────────────────
     libreoffice
     mission-center
-
+    kid3
     # ── System utilities ──────────────────────────────────────────────
     ddcutil         # external monitor brightness
     lm_sensors
@@ -275,7 +283,7 @@
 
     # ── Wayland / Qt / GTK runtime libs ──────────────────────────────
     qt6.qtwayland
-    libsForQt5.qt5.qtwayland
+    qt5.qtwayland
     qgnomeplatform-qt6
 
     # ── Theming / Customisation ───────────────────────────────────────
